@@ -57,13 +57,13 @@ $(function () {
         })
     })
 
-
 $(document).ready(function () {
     /*######################################모달 부분*/
     $('.trigger').on('click', function () {
         $('.modal-wrapper').toggleClass('open');
         $('.page-wrapper').toggleClass('blur-it');
-         //body 스크롤 방지
+        console.log("modal")
+         // body 스크롤 방지
         document.body.classList.add("stop-scroll");
         return false;
     });
@@ -76,39 +76,56 @@ $(document).ready(function () {
         })
     });
 
-    show_reply();
+    /*######################################게시 버튼 클릭*/
+    $(function () {
+        $('#post-button').on('click', function () {
+            alert('게시 완료!')
+        })
+    })
+    $(function () {
+        $('#post-button1').on('click', function () {
+            alert('게시 완료!')
+        })
+    })
+    $(function () {
+        $('#post-button2').on('click', function () {
+            alert('게시 완료!')
+        })
+    })
+
+    // show_reply();
 });
 
  /*댓글 포스팅, 댓글 내용 가져와 보여주기 기능*/
-function show_reply() {
-        $.ajax({
-            type: 'GET',
-            url: '/insta',
-            data: {},
-            success: function (response) {
-                const rows = response['replies']
-                for (let i = 0; i < rows.length; i++) {
-                    const nickname = rows[i]['nickname']
-                    const reply = rows[i]['reply']
-
-                    let temp_html = `<p class="card-text id-text"><span style="font-weight: bold">${nickname}</span>${reply}</p>`
-                    $('#replying').append(temp_html);
-                }
-            }
-        })
-}
-
-function save_reply() {
-        const nickname = $('#nickname').val();
-        const reply = $('#reply').val();
-
-        $.ajax({
-            type: 'POST',
-            url: '/insta',
-            data: {nickname_give: nickname, reply_give: reply},
-            success: function (response) {
-                alert(response['msg'])
-                window.location.reload();
-            }
-        });
-    }
+// function show_reply() {
+//         $.ajax({
+//             type: 'GET',
+//             url: '/insta',
+//             data: {},
+//             success: function (response) {
+//                 const rows = response['replies']
+//                 for (let i = 0; i < rows.length; i++) {
+//                     const nickname = rows[i]['nickname']
+//                     const reply = rows[i]['reply']
+//
+//                     let temp_html = `<p class="card-text id-text"><span style="font-weight: bold">${nickname}</span>${reply}</p>`
+//                     $('#replying').append(temp_html);
+//                 }
+//             }
+//         })
+// }
+//
+// function save_reply() {
+//         const nickname = $('#nickname').val();
+//         const reply = $('#reply').val();
+//
+//         $.ajax({
+//             type: 'POST',
+//             url: '/insta',
+//             data: {nickname_give: nickname, reply_give: reply},
+//             success: function (response) {
+//                 alert(response['msg'])
+//                 window.location.reload();
+//             }
+//         });
+//     }
