@@ -198,7 +198,7 @@ body { /*본문이 나오는 부분의 배경색 설정*/
   overflow: hidden;
 }
 .blur-it {
-    filter: blur(5px)
+    filter: blur(5px);
 }
 .modal-wrapper {
     width: 100%;
@@ -209,11 +209,11 @@ body { /*본문이 나오는 부분의 배경색 설정*/
     background: transparent;
     visibility: hidden;
     border: 1px solid black;
-    opacity: 0;
+    /*opacity: 0;*/  /*opacity가 설정되어 있으면 z-index의 영향을 받지 않게 될 수도 있음, 그러므로 주석처리*/
     transition: all 0.25s ease-in-out;
 }
 .modal-wrapper.open {
-    opacity: 1;
+    /*opacity: 1;*/  /*opacity가 설정되어 있으면 z-index의 영향을 받지 않게 될 수도 있음, 그러므로 주석처리*/
     visibility: visible;
 }
 .good-job {
@@ -223,21 +223,21 @@ body { /*본문이 나오는 부분의 배경색 설정*/
     width: 380px;
     height: 390px;
     display: block;
-    margin: 50% 0 0 -200px;
+    margin: 100px auto 0px;
     text-align: center;
     padding: 10px 10px 10px 10px;
     border: 1px solid black;
     border-radius: 10px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+    position: absolute;
+    /*top: 50%;*/
+    /*left: 50%;*/
     background: #fff;
-    opacity: 0;
+    /*opacity: 0;*/  /*opacity가 설정되어 있으면 z-index의 영향을 받지 않게 될 수도 있음, 그러므로 주석처리*/
     transition: all 0.5s ease-in-out;
 }
 .modal-wrapper.open.modal {
     margin-top: -200px;
-    opacity: 1;
+    /*opacity: 1;*/  /*opacity가 설정되어 있으면 z-index의 영향을 받지 않게 될 수도 있음, 그러므로 주석처리*/
 }
 /*######################################미디어쿼리*/
 @media ( max-width: 614px ) {
