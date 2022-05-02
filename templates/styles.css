@@ -1,165 +1,289 @@
-.whole {
-    background-color: #EEEEEE;
-    width : 100%;
-    height: 100%;
-}
-.header {
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-
-    /*position: fixed;*/
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-     justify-content: center;
-
+/*######################################상단 네비게이션바*/
+.insta-head { /*맨 위의 상단 바*/
     background-color: white;
-    border-bottom: 1px solid #dddddd;
-}
-.nav_pad {
-    padding-left: 0px;
-    padding-right: 220px;
-}
-.search {
-    margin: 0px;
-    padding-right: 80px;
-}
-.icon {
-    margin: 0px;
-}
-.small_icon {
-    padding-right: 15px;
-}
-.rightBody {
-    padding-right: 50px;
-}
-.story {
-    height: 100px;
-    padding-top: 20px;
-    margin-left: 250px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.circles {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.card-box {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #dddddd; /*상단 바 하단에 선을 그어줌*/
+    margin-bottom: 20px; /*아래의 메인 바디 부분과의 거리를 둠*/
+    width: 100%;
 
+    align-items: center;
+    justify-content: space-between;
+
+    /*헤드 부분을 화면 상단에 고정시켜 스크롤 시 내려가지 않도록 조치*/
+    position: sticky;
+    top: 0;
 }
-.card {
-    width: 700px;
- }
-.card-header {
+.searchbar { /*인스타그램 상단 서치바*/
+    width: 300px;
+    margin: 0;
+}
+.upperIcon { /*우상단 아이콘 모음*/
+    margin: 0;
+}
+.eachIcon { /*각 아이콘들 간의 간격 조정*/
+    margin-right: 15px;
+}
+.upperIcon > a {
+    text-decoration: none;
+    color: black;
+}
+.myProfileImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+/*######################################메인 바디 부분*/
+body { /*본문이 나오는 부분의 배경색 설정*/
+        background-color: #dddddd;
+}
+.row { /*전체 본문을 넣어놓은 컨테이너*/
+    width: 940px;
+    margin: auto;
+}
+
+/*######################################왼쪽 스토리 & 피드 부분*/
+.left { /*본문의 왼쪽 부분으로 피드가 들어갈 부분*/
+    width: 605px;
+    height: auto;
+    padding: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    float: left;
+}
+.story { /*스토리 부분 박스 마진 적용*/
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.feed-box { /*feed를 한번 묶어주는 부분*/
+    margin-bottom: 20px;
+}
+.feed { /*전체 피드 주변의 테두리를 없앰*/
+    border: none;
+    margin-bottom: 20px;
+}
+.feed-header { /*피드 상단에 사용자 사진, 닉네임, 주소 있는 부분*/
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
+
+    padding: 10px 10px 10px 10px;
 }
-.text_pos {
+.nick-addr { /*사용자 닉네임과 주소가 써져있는 부분*/
     position: static;
 }
-.three-dot {
+.nickname { /*닉네임이 써져있는 부분의 마진을 없애 주소와 붙여줌*/
+    margin-bottom: 0;
+}
+.three-dot { /*피드 상단의 더보기 점 세 개*/
     position: absolute;
     right: 20px;
 }
-.nickname {
-    margin-bottom: 0px;
-}
-.photo-box {
+.photo-box { /*피드의 사진이 있는 박스 부분*/
     border-top: 0.5px solid #dddddd;
     border-bottom: 0.5px solid #dddddd;
 }
-.card-bookmark {
-    display: flex;
-    flex-direction: column;
+.feed-words { /*피드에 말이 써져있는 부분의 위치 설정*/
     position: relative;
 }
-.card-icons {
+.feed-words-icons { /*사용자의 게시글이 나오는 부분의 하트 비행기 댓글 이모티콘 있는곳*/
     position: static;
 }
-.bookmark {
+.bookmark { /*오른쪽에 있는 북마크 이모티콘*/
     margin-top: 10px;
     position: absolute;
     right: 20px;
+    top: 15px;
 }
-.user_words {
-    margin-bottom: 0px;
+.feed_icon_hover:hover { /*피드의 게시글 위에 있는 아이콘들 위에 커서가 올라가면 호버기능으로 인해 색이 변하는 기능 구현*/
+    color: gray;            /*폰트어썸에서 임포트한 부분이 반드시 필요!*/
 }
-.extra-info {
+.hidden { /*더보기 버튼을 누르기 전까지는 해당 내용을 가리기 위해 설정*/
+    display: none;
+}
+.img_pop { /*댓글 5개 더 보기 버튼을 누르면 피드 사진을 크게 해줌*/
+
+}
+.footer-pos { /*피드 하단 부분 위치 조정을 위해 설정*/
+    position: relative;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+}
+.emoji-button { /*댓글달기 옆에 있는 이모지 버튼*/
+    margin-right: 10px;
+}
+.extra-info { /*댓글 더보기와 몇시간 전 부분 글자 흐리게 만들어 주는 효과*/
     opacity: 90%;
     color: grey;
 }
-.footer-pos {
-    position: relative;
+.id-text { /*아이디-글 혹은 아이디-댓글 부분의 마진을 없애 다음 줄과 떨어지지 않게 해줌*/
+    margin-bottom: 0px;
 }
-.post-btn {
+.post-btn { /*피드 하단의 글 게시 버튼*/
     opacity: 80%;
     color: dodgerblue;
     position: absolute;
     right: 5px;
     top: 5px;
 }
-.mini-profile {
-    padding-top: 50px;
-    padding-bottom: 30px;
 
+/*######################################오른쪽 프로필과 사람 추천 부분*/
+.right { /*본문의 오른쪽으로 조그만 프로필과 추천 항목이 들어갈 부분*/
+    width: 325px;
+    height: auto;
+    padding: 20px;
+
+    margin-bottom: 20px;
+    float: right;
+    background-color: transparent;
+
+    /*오른쪽 본문을 해당 위치에 고정시키기 위해 조치*/
+    margin-right: 300px;
+    position: fixed;
+    right: 0;
+}
+.mini-profile { /*좌상단 조그만 프로필*/
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+}
+.photo-name { /*사진과 이름/닉네임의 정렬을 위해 설정*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   align-items: center;
+}
+.text-opacity { /*글자 흐리게 해주기*/
+    opacity: 80%;
+}
+.recommend-title { /*친구 추천부분의 제목*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*######################################모달 생성!!!!!!!!!!!!!*/
+/*.modal {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    display: none;*/
+/*    background-color: rgba(0, 0, 0, 0.4);*/
+/*}*/
+/*.modal.show {*/
+/*    display: block;*/
+/*}*/
+/*.modal_body {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    width: 400px;*/
+/*    height: 600px;*/
+/*    padding: 40px;*/
+/*    text-align: center;*/
+/*    background-color: rgb(255, 255, 255);*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);*/
+/*    transform: translateX(-50%) translateY(-50%);*/
+/*}*/
+
+/* body 스크롤 방지용 */
+.stop-scroll{
+  height: 100%;
+  overflow: hidden;
+}
+.blur-it {
+    filter: blur(5px)
+}
+.modal-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    visibility: hidden;
+    border: 1px solid black;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+.good-job {
+    font-weight: bold;
+}
+.modal {
+    width: 380px;
+    height: 390px;
+    display: block;
+    margin: 50% 0 0 -200px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
     position: relative;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
-.text_col {
-    opacity: 80%;
+.modal-wrapper.open.modal {
+    margin-top: -200px;
+    opacity: 1;
 }
-.recommend {
-    height: 500px;
+/*######################################미디어쿼리*/
+@media ( max-width: 614px ) {
+    .insta-head { /*진짜 인스타에서는 화면을 줄이면 헤더부분과 스토리 부분이 딱 만나게 되는데 그게 구현 안됨*/
+        margin-bottom: 0px;
+    }
+
+    .searchbar { /*화면이 줄어들면 중간의 검색창을 안보이게 해라*/
+        display: none;
+    }
+
+    .left { /*화면의 줄어들면 왼쪽 div의 width를 100%로 만들어서 꽉차게 해라*/
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .feed { /*피드 부분의 width를 화면이 줄어들면 100%로 조정해준다.(의도한대로 안됨. ) */
+        width: 100%;
+    }
+
+    .row { /*화면을 줄였을 때 width가 자동적으로 맞춰지도록 해 줄어든 화면에 맞는 사이즈가 될 수 있게 해준다.*/
+        width: auto;
+        margin-left: 0px; /*진짜 인스타처럼 줄이면 화면 경계랑 피드가 만났으면 좋겠는데 그것이 구현이 안됨*/
+        margin-right: 0px;
+    }
+
+    .right { /*화면이 줄어들면 오른쪽 div를 보이지 않게 숨겨라*/
+        margin: 0px 0px 0px 0px; /*마진값도 다 없애라*/
+        display: none;
+    }
+    .each-div > div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
-.recommend-info {
-    width: 350px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-}
-.recommend-info > button {
-    opacity: 80%;
-    color: black;
-    font-weight: bold;
-    position: absolute;
-    right: 0px;
-}
-.recommend-p {
-    justify-content: center;
+
+/*######################################         my_page     ################################################################*/
+/*###################################### 사진 9개가 놓일 곳*/
+.mypage-photo {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 350px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
+    justify-content: center;
 }
-.recommend-p > div {
-    padding-left: 0px;
-    width: 350px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-}
-.recommend-p > p {
-    font-weight: bold;
-    font-size: 5px;
-}
-.reco-list {
-    padding-left: 0px;
-    width: 400px;
-    background-color: transparent;
-    border: none;
-    margin-bottom: 10px;
+.each-div {
+    display: flex;
+    flex-direction: row;
 }

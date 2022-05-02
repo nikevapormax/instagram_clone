@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+<!--    반응형 웹을 위한 뷰포트 설정-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+<!--    폰트어썸 사용을 위한 임포트-->
+    <script src="https://kit.fontawesome.com/585baad77f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <title>insta_clone</title>
+</head>
+<body style="background-color: #dddddd;">
+<!--상단 헤드 부분, 메인 바디 부분 -->
+    <div class="page-wrapper" id="container-fluid">
+<!--        상단 헤드 부분-->
+        <div class="insta-head" style="z-index: 2;">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid ">
+<!--                    인스타그램 로고 부분-->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="https://www.instagram.com/">
+                            <img alt="Instagram" style="width: 120px; height: 40px" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png">
+                        </a>
+                    </div>
+<!--                    인스타그램 search 바-->
+                    <div class="form-group searchbar">
+                        <input type="text" class="form-control" style="background-color: #EEEEEE" placeholder="검색">
+                    </div>
+<!--                    인스타그램 상단 오른쪽 아이콘들-->
+                    <p class="upperIcon">
+                        <a id="home" href="index.html"><i class="fa-solid fa-house fa-lg eachIcon"></i></a>
+                        <a id="send-message" ><i class="fa-regular fa-paper-plane fa-lg eachIcon"></i></a>
+                        <a><i class="fa-regular fa-square-plus fa-lg eachIcon"></i></a>
+                        <a><i class="fa-regular fa-compass fa-lg eachIcon"></i></a>
+                        <a><i class="fa-regular fa-heart fa-lg eachIcon"></i></a>
+                        <a href="my_page.html"><img class="myProfileImg" style="width: 32px; height: 32px;" src="/static/myprofile.png"></a>
+                    </p>
+                </div>
+            </nav>
+        </div>
+        <div></div>
+        <hr style="width: 935px;">
+<!--        하단 게시글 포지션-->
+        <div class="mypage-photo">
+            <div class="each-div">
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202110_GEO_KR?wid=904&hei=840&fmt=jpeg&qlt=95&.v=1647363032344"
+                    style="width: 293px; height: 293px;">
+                </div>
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202110_GEO_KR?wid=904&hei=840&fmt=jpeg&qlt=95&.v=1647363032344"
+                    style="width: 293px; height: 293px;">
+                </div>
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202110_GEO_KR?wid=904&hei=840&fmt=jpeg&qlt=95&.v=1647363032344"
+                    style="width: 293px; height: 293px;">
+                </div>
+            </div>
+            <div class="each-div">
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://img.freepik.com/free-photo/storm-approaching-loch-laggan-in-scotland_477293-2630.jpg?w=996"
+                    style="width: 293px; height: 293px;">
+                </div>
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://img.freepik.com/free-photo/aerial-view-of-river-in-abundant-tropical-rainforest-on-natural-park-at-countryside_49071-2932.jpg?w=996"
+                    style="width: 293px; height: 293px;">
+                </div>
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://img.freepik.com/free-photo/aerial-view-of-sunset-over-doi-luang-chiang-dao-mountain-range-with-colorful-autumn-forest-on-hill-in-countryside-at-chiang-dao-chiang-mai-thailand_49071-7407.jpg?w=740"
+                    style="width: 293px; height: 293px;">
+                </div>
+            </div>
+            <div class="each-div">
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://img.freepik.com/free-photo/view-airplane-cloudy-blue-colorful-on-sky_49071-7735.jpg?w=996"
+                    style="width: 293px; height: 293px;">
+                </div>
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://img.freepik.com/free-photo/aerial-view-of-highway-in-tropical-rainforest-with-sunset-on-mountain-at-countryside_49071-7530.jpg?w=996"
+                    style="width: 293px; height: 293px;">
+                </div>
+                <div style="width: 293px; height: 293px; background-color: dodgerblue; margin: 0px 28px 28px 0px;">
+                    <img alt=""
+                         src="https://img.freepik.com/free-photo/yellow-traffic-signboard-on-snow-covered-roadside-at-coastline_49071-7438.jpg?w=996"
+                    style="width: 293px; height: 293px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
