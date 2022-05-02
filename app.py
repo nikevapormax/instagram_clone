@@ -17,24 +17,24 @@ def my_page():
     return render_template('my_page.html')
 
 
-@app.route("/insta", methods=["POST"])
-def insta_reply_post():
-    nickname_receive = request.form['nickname_give']
-    reply_receive = request.form['reply_give']
+# @app.route("/insta", methods=["POST"])
+# def insta_reply_post():
+#     nickname_receive = request.form['nickname_give']
+#     reply_receive = request.form['reply_give']
 
-    doc = {
-        'nickname': nickname_receive,
-        'reply': reply_receive,
-    }
+#     doc = {
+#         'nickname': nickname_receive,
+#         'reply': reply_receive,
+#     }
 
-    db.instagram.insert_one(doc)
-    return jsonify({'msg': '댓글 작성 완료!'})
+#     db.instagram.insert_one(doc)
+#     return jsonify({'msg': '댓글 작성 완료!'})
 
 
-@app.route("/insta", methods=["GET"])
-def insta_reply_get():
-    reply_list = list(db.instagram.find({}, {'_id': False}))
-    return jsonify({'replies': reply_list})
+# @app.route("/insta", methods=["GET"])
+# def insta_reply_get():
+#     reply_list = list(db.instagram.find({}, {'_id': False}))
+#     return jsonify({'replies': reply_list})
 
 
 if __name__ == '__main__':
